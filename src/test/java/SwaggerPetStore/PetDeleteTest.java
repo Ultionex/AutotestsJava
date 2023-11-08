@@ -1,5 +1,7 @@
-import dto.CategoryDTO;
-import dto.PetDTO;
+package SwaggerPetStore;
+
+import SwaggerPetStore.dto.CategoryDTO;
+import SwaggerPetStore.dto.PetDTO;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.MethodOrderer;
@@ -8,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class PetDeleteTest {
+public class PetDeleteTest extends Settings {
     static PetDTO pet;
 
     @Order(1)

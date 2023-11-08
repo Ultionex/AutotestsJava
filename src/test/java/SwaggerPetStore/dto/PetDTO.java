@@ -1,4 +1,4 @@
-package dto;
+package SwaggerPetStore.dto;
 
 import lombok.Builder;
 import lombok.Value;
