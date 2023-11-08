@@ -1,7 +1,7 @@
 package SwaggerPetStore;
 
-import SwaggerPetStore.dto.CategoryDTO;
-import SwaggerPetStore.dto.PetDTO;
+import SwaggerPetStore.DTO.CategoryDTO;
+import SwaggerPetStore.DTO.PetDTO;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.MethodOrderer;
@@ -43,6 +43,7 @@ public class PetDeleteTest extends Settings {
     @Order(2)
     @Test
     void deletePet() {
+        // Отправка DELETE-запроса на сервер для ранее созданного питомца
         RestAssured.given()
                 .contentType(ContentType.JSON)
                 .when()

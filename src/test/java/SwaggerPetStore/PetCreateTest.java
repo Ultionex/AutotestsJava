@@ -1,7 +1,7 @@
 package SwaggerPetStore;
 
-import SwaggerPetStore.dto.CategoryDTO;
-import SwaggerPetStore.dto.PetDTO;
+import SwaggerPetStore.DTO.CategoryDTO;
+import SwaggerPetStore.DTO.PetDTO;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.MethodOrderer;
@@ -17,7 +17,7 @@ public class PetCreateTest extends Settings {
     @Order(1)
     @Test
     void createPetTest() {
-
+// Создание нового объекта PetDTO
         pet = PetDTO.builder()
                 .name("Jack")
                 .category(CategoryDTO.builder()
@@ -29,6 +29,7 @@ public class PetCreateTest extends Settings {
                 .status("available")
                 .build();
 
+// Отправка POST-запроса на сервер с новым объектом PetDTO
         pet = RestAssured.given()
                 .contentType(ContentType.JSON)
                 .body(pet)
@@ -43,7 +44,7 @@ public class PetCreateTest extends Settings {
     @Order(2)
     @Test
     void getPetById() {
-
+// Отправка GET-запроса на сервер для ранее созданного питомца
         RestAssured.given()
                 .contentType(ContentType.JSON)
                 .when()

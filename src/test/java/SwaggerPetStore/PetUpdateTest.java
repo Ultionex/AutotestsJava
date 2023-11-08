@@ -1,7 +1,7 @@
 package SwaggerPetStore;
 
-import SwaggerPetStore.dto.CategoryDTO;
-import SwaggerPetStore.dto.PetDTO;
+import SwaggerPetStore.DTO.CategoryDTO;
+import SwaggerPetStore.DTO.PetDTO;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.MethodOrderer;
@@ -42,7 +42,7 @@ public class PetUpdateTest extends Settings {
     @Order(2)
     @Test
     void updatePetTest() {
-
+        // Обновление объекта PetDTO с новыми данными
         pet = PetDTO.builder()
                 .id(pet.getId())
                 .name("Rob")
@@ -54,7 +54,7 @@ public class PetUpdateTest extends Settings {
                 .photoUrls(new String[] {"url"})
                 .status("available")
                 .build();
-
+// Отправка PUT-запроса на сервер с обновленным объектом PetDTO
         pet = RestAssured.given()
                 .contentType(ContentType.JSON)
                 .body(pet)

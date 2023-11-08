@@ -10,10 +10,12 @@ public class Settings {
 
     @BeforeAll
     static void setupBeforeTests() {
+        // В этом методе создается новый экземпляр HashMap и присваивается body
         body = new HashMap<>();
     }
     @AfterEach
     void clearBody(){
+        // В этом методе body очищается
         body.clear();
     }
 }
