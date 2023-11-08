@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class PetCreateTest extends Settings {
+public class PetCreateTest  {
 
     static PetDTO pet;
 
