@@ -15,10 +15,11 @@
 - Кейс 2 Конкатенация двух строк
 - Кейс 3 Появление сообщения при вводе строки в поле
 ## Структура проекта
-- `src/main/java/pages` - Классы-страницы PageObject для сайтов Basic Calculator и Random Number
-- `test/java/BasicCalculatorAndRandomNumber` - Классы соответствующие 3 кейсам UI-автотестов для сайтов "Basic Calculator" и "Random Number"
-- `test/java/SwaggerPetStore` - Классы API-автотестов для сайта "Swagger PetStore"
+- `src/main/java/pages` - классы-страницы PageObject для сайтов Basic Calculator и Random Number
+- `test/java/BasicCalculatorAndRandomNumber` - классы соответствующие 3 кейсам UI-автотестов для сайтов "Basic Calculator" и "Random Number"
+- `test/java/SwaggerPetStore` - классы API-автотестов для сайта "Swagger PetStore"
 - `test/java/SwaggerPetStore/DTO` - DTO-классы для работы с сайтом "Swagger PetStore"
 ## Запуск тестов
-Для запуска тестов предлагаю использовать следующую команду:
-- `mvn test`
+Для запуска тестов предлагаю использовать следующие команды:
+- `mvn test` - позволяет запустить все тесты
+- `mvn test -Dtest=*TestClassName*` - позволяет запустить определённый тестовый класс
