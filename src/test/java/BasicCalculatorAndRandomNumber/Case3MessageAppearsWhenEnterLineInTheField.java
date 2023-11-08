@@ -1,5 +1,6 @@
 package BasicCalculatorAndRandomNumber;
 
+import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.Test;
 import pages.RandomNumberPage;
 
@@ -15,6 +16,7 @@ public class Case3MessageAppearsWhenEnterLineInTheField {
         rndnum.InputFieldGuess("string");
         rndnum.ClickSubmit();
         rndnum.CheckLabelFb("string: Not a number!");
+        Selenide.closeWindow();
     }
 
 }

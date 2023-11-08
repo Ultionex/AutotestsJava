@@ -1,7 +1,9 @@
 package BasicCalculatorAndRandomNumber;
 
+import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.Test;
 import pages.BasicCalculatorPage;
+
 
 public class Case1DifferenceOfTwoIntegersTest {
 
@@ -16,5 +18,6 @@ public class Case1DifferenceOfTwoIntegersTest {
         calculator.ChangeOperation(String.valueOf(1));
         calculator.calculate();
         calculator.result(String.valueOf(-1));
+        Selenide.closeWindow();
     }
 }

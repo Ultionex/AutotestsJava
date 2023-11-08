@@ -1,5 +1,6 @@
 package BasicCalculatorAndRandomNumber;
 
+import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.Test;
 import pages.BasicCalculatorPage;
 
@@ -16,5 +17,6 @@ public class Case2ConcatenationOfTwoStrings {
         calculator.ChangeOperation(String.valueOf(4));
         calculator.calculate();
         calculator.result("gsbu");
+        Selenide.closeWindow();
     }
 }
