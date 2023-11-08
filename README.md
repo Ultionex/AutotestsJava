@@ -20,4 +20,5 @@
 - `test/java/SwaggerPetStore` - Классы API-автотестов для сайта "Swagger PetStore"
 - `test/java/SwaggerPetStore/DTO` - DTO-классы для работы с сайтом "Swagger PetStore"
 ## Запуск тестов
-`mvn test`
+Для запуска тестов предлагаю использовать следующую команду:
+- `mvn test`
